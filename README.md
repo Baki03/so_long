@@ -19,3 +19,5 @@ Utilisation: Après avoir compilé le projet, le fichier exécutable avec le nom
 Exemple :
 
 ./so_long map.ber certaines cartes et la carte utilisée pour générer l'image d'en-tête se trouvent dans le dossier maps
+
+![Screenshot 2024-01-17 at 13 48 15](https://github.com/Baki03/so_long/assets/138146680/5978de8e-bf49-4f7c-8b90-0f1ebb41dd39)
