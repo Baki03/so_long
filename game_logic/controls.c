@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   controls.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pepi <pepi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 17:34:24 by prossi            #+#    #+#             */
-/*   Updated: 2024/01/17 15:15:40 by pepi             ###   ########.fr       */
+/*   Updated: 2024/01/23 16:40:39 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,11 +82,7 @@ static int	keyboard_w_s(t_complete *game, int movement)
 		game->map[j + 1][i] = '0';
 	}
 	else if (movement == 1)
-	{
 		keyboard_ex(game, movement, i, j);
-	}
-	printf("Steps Taken: %i\n", game->counter);
-	printf("Collectables Left: %i\n", game->collectables);
 	return (1);
 }
 
@@ -109,11 +105,7 @@ static int	keyboard_a_d(t_complete *game, int movement)
 		game->map[j][i + 1] = '0';
 	}
 	else if (movement == 2)
-	{
 		keyboard_ex(game, movement, i, j);
-	}
-	printf("Steps Taken: %i\n", game->counter);
-	printf("Collectables Remaining: %i\n", game->collectables);
 	return (1);
 }
 
@@ -135,6 +127,8 @@ int	controls_working(int command, t_complete *game)
 	{
 		game->command = command;
 		adding_in_graphics(game);
+		display_score(game);
+		display_collectables(game);
 	}
 	return (1);
 }

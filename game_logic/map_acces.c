@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_acces.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pepi <pepi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:58:11 by pepi              #+#    #+#             */
-/*   Updated: 2024/01/17 15:16:48 by pepi             ###   ########.fr       */
+/*   Updated: 2024/01/23 16:45:20 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	check_map_solvable(t_complete *game)
 				|| game->map[y][x] == 'E')
 				&& !has_visited[y][x])
 			{
-				ft_printf("\nERROR: exit or collectables unaccesible !");
+				ft_printf("ERROR\n exit or collectables unaccesible !");
 				exit_point(game);
 			}
 			x++;

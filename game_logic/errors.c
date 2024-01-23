@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pepi <pepi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 17:33:01 by prossi            #+#    #+#             */
-/*   Updated: 2024/01/17 15:16:40 by pepi             ###   ########.fr       */
+/*   Updated: 2024/01/23 16:45:01 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static void	count_checker(t_complete *game, int height, int width)
 		game->map[height][width] != 'C' &&
 		game->map[height][width] != '\n')
 	{
-		printf("\nError Here!%c\n", game->map[height][width]);
+		printf("Error\nHere!%c\n", game->map[height][width]);
 		exit_point(game);
 	}
 	if (game->map[height][width] == 'C')
@@ -97,8 +97,8 @@ void	character_valid(t_complete *game)
 	if (!(game->playercount == 1 && game->collectables >= 1
 			&& game->exitcount == 1))
 	{
-		printf("\nError\nSomething is wrong!\n");
-		printf("either player, exit or collectable issue\n");
+		printf("Error\nSomething is wrong!");
+		printf("\neither player, exit or collectable issue");
 		exit_point(game);
 	}
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pepi <pepi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 16:32:27 by pepi              #+#    #+#             */
-/*   Updated: 2024/01/17 15:16:55 by pepi             ###   ########.fr       */
+/*   Updated: 2024/01/23 16:44:16 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	check_filename(const char *file)
 	point = ft_strrchr(file, '.');
 	if (point == NULL || ft_strcmp(point, ".ber") != 0)
 	{
-		ft_printf("Erreur : Le fichier doit avoir l'extension .ber\n");
+		ft_printf("Error\nmap must be a '.ber' file\n");
 		exit(EXIT_FAILURE);
 	}
 }
@@ -39,7 +39,7 @@ static	void	check_map_rectangular(t_complete *game)
 		{
 			if (width != game->widthmap)
 			{
-				ft_printf("Map not rectangular");
+				ft_printf("Error\nMap not rectangular");
 				exit_point(game);
 			}
 		}

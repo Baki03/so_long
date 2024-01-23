@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pepi <pepi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 20:15:54 by prossi            #+#    #+#             */
-/*   Updated: 2024/01/17 15:17:06 by pepi             ###   ########.fr       */
+/*   Updated: 2024/01/23 17:50:18 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ typedef struct s_game_data
 
 	void		*floor;
 	void		*ennemy;
+	int			enemy_x;
+	int			enemy_y;
 	void		*wall;
 	void		*player;
 	t_player	player_pos;
@@ -73,4 +75,6 @@ char	*ft_strrchr(const char *s, int c);
 int		width_of_map(char *line);
 void	check_map_solvable(t_complete *game);
 void	right_move_ex(t_complete	*game, int i, int j);
+void	display_score(t_complete	*game);
+void	display_collectables(t_complete	*game);
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pepi <pepi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 17:34:01 by prossi            #+#    #+#             */
-/*   Updated: 2024/01/11 14:25:31 by pepi             ###   ########.fr       */
+/*   Updated: 2024/01/23 17:25:24 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,12 @@ int	map_reading(t_complete *game, char **argv)
 	{
 		printf("map can not be open");
 		exit (0);
+	}
+	readmap = get_next_line(game->fd);
+	if (readmap == NULL || (!add_line(game, readmap)))
+	{
+		ft_printf("Error\nMap empty");
+		exit(EXIT_FAILURE);
 	}
 	while (1)
 	{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pepi <pepi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 16:49:02 by prossi            #+#    #+#             */
-/*   Updated: 2024/01/17 15:16:51 by pepi             ###   ########.fr       */
+/*   Updated: 2024/01/23 17:26:07 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,11 @@ int	main(int argc, char **argv)
 	check_errors(&game);
 	game.mlxpointer = mlx_init();
 	game.winpointer = mlx_new_window(game.mlxpointer, (game.widthmap * 64),
-			(game.heightmap * 64), "solong");
+			(game.heightmap * 64), "so_long");
 	place_images_in_game(&game);
 	adding_in_graphics(&game);
+	display_score(&game);
+	display_collectables(&game);
 	mlx_key_hook(game.winpointer, controls_working, &game);
 	mlx_hook(game.winpointer, 17, 0, (void *)exit_point, 0);
 	mlx_loop(game.mlxpointer);
