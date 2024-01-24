@@ -6,19 +6,17 @@
 /*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 20:15:54 by prossi            #+#    #+#             */
-/*   Updated: 2024/01/23 17:50:18 by rpepi            ###   ########.fr       */
+/*   Updated: 2024/01/24 12:28:05 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# include <unistd.h>
 # include <stdbool.h>
-# include <stdio.h>
 # include <fcntl.h>
 # include <errno.h>
-# include <string.h>
+
 # include "ft_printf.h"
 # include "get_next_line.h"
 # include "../minilibx/mlx.h"
@@ -49,8 +47,6 @@ typedef struct s_game_data
 
 	void		*floor;
 	void		*ennemy;
-	int			enemy_x;
-	int			enemy_y;
 	void		*wall;
 	void		*player;
 	t_player	player_pos;

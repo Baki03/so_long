@@ -6,7 +6,7 @@
 /*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 17:34:24 by prossi            #+#    #+#             */
-/*   Updated: 2024/01/23 16:40:39 by rpepi            ###   ########.fr       */
+/*   Updated: 2024/01/24 12:29:44 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,8 @@ static int	keyboard_a_d(t_complete *game, int movement)
 
 int	controls_working(int command, t_complete *game)
 {
+	int	i;
+	int	j;
 	int	works;
 
 	if (command == 53)
@@ -126,6 +128,9 @@ int	controls_working(int command, t_complete *game)
 	if (works)
 	{
 		game->command = command;
+		if (game->collectables == 0)
+			game->exit = mlx_xpm_file_to_image(game->mlxpointer,
+					"game_images/exitopen.xpm", &i, &j);
 		adding_in_graphics(game);
 		display_score(game);
 		display_collectables(game);

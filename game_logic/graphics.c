@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   graphics.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pepi <pepi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 19:06:51 by prossi            #+#    #+#             */
-/*   Updated: 2024/01/17 15:09:37 by pepi             ###   ########.fr       */
+/*   Updated: 2024/01/24 12:24:55 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	place_images_in_game(t_complete *game)
 	game->player = mlx_xpm_file_to_image(game->mlxpointer,
 			"game_images/player/bas.xpm", &i, &j);
 	game->exit = mlx_xpm_file_to_image(game->mlxpointer,
-			"game_images/exitopen.xpm", &i, &j);
+			"game_images/exitclose.xpm", &i, &j);
 	game->collectable = mlx_xpm_file_to_image(game->mlxpointer,
 			"game_images/item.xpm", &i, &j);
 }

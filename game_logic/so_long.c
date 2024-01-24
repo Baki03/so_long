@@ -6,7 +6,7 @@
 /*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 16:49:02 by prossi            #+#    #+#             */
-/*   Updated: 2024/01/23 17:26:07 by rpepi            ###   ########.fr       */
+/*   Updated: 2024/01/24 12:18:53 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,9 @@ int	exit_point(t_complete *game)
 int	main(int argc, char **argv)
 {
 	t_complete	game;
+	int			i;
 
+	i = 0;
 	if (argc != 2)
 	{
 		ft_printf("Usage: %s <map_file>\n", argv[0]);
