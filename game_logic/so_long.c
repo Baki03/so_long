@@ -6,13 +6,13 @@
 /*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 16:49:02 by prossi            #+#    #+#             */
-/*   Updated: 2024/01/24 12:18:53 by rpepi            ###   ########.fr       */
+/*   Updated: 2024/01/31 10:27:53 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/so_long.h"
 
-static void	*ft_memset(void *b, int c, size_t length)
+static void	*ft_memsete(void *b, int c, size_t length)
 {
 	unsigned char	*p;
 
@@ -51,7 +51,7 @@ int	main(int argc, char **argv)
 		return (EXIT_FAILURE);
 	}
 	check_filename(argv[1]);
-	ft_memset(&game, 0, sizeof(t_complete));
+	ft_memsete(&game, 0, sizeof(t_complete));
 	map_reading(&game, argv);
 	check_errors(&game);
 	game.mlxpointer = mlx_init();

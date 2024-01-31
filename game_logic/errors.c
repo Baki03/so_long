@@ -6,11 +6,11 @@
 /*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 17:33:01 by prossi            #+#    #+#             */
-/*   Updated: 2024/01/23 16:45:01 by rpepi            ###   ########.fr       */
+/*   Updated: 2024/01/31 10:23:57 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../headers/so_long.h"
 
 static int	vertical_wall_check(t_complete *game)
 {

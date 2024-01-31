@@ -6,11 +6,11 @@
 /*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 17:34:24 by prossi            #+#    #+#             */
-/*   Updated: 2024/01/24 12:29:44 by rpepi            ###   ########.fr       */
+/*   Updated: 2024/01/31 10:23:46 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../headers/so_long.h"
 
 static int	right_move(t_complete *game, int i, int j)
 {

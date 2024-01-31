@@ -6,7 +6,7 @@
 /*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 20:15:54 by prossi            #+#    #+#             */
-/*   Updated: 2024/01/24 12:28:05 by rpepi            ###   ########.fr       */
+/*   Updated: 2024/01/31 10:32:16 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 # include <fcntl.h>
 # include <errno.h>
 
-# include "ft_printf.h"
-# include "get_next_line.h"
+# include "../libft/libft.h"
 # include "../minilibx/mlx.h"
 
 # define MAX_LINES 250

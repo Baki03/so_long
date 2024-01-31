@@ -6,11 +6,11 @@
 /*   By: rpepi <rpepi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 17:34:01 by prossi            #+#    #+#             */
-/*   Updated: 2024/01/23 17:25:24 by rpepi            ###   ########.fr       */
+/*   Updated: 2024/01/31 10:24:03 by rpepi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../headers/so_long.h"
 
 int	width_of_map(char *line)
 {

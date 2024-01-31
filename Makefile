@@ -1,23 +1,48 @@
-NAME := so_long
+NAME = so_long
 
-CC := gcc
+LIBFTDIR = libft/
 
-CFLAGS := -Wall -Wextra -Werror -Iheaders/
+MLXDIR = minilibx/
 
-SOURCE := game_logic/*.c
-GETNEXTLINE := get_next_line/*c
-PRINTF := ft_printf/*c
-LIBRARY := -Lminilibx -lmlx -framework OpenGL -framework AppKit
-MINILIBX := minilibx/
+CC = gcc
 
-all:
-	make -C $(MINILIBX)
-	$(CC) $(CFLAGS) $(SOURCE) $(GETNEXTLINE) $(PRINTF) $(LIBRARY) -o $(NAME)
+RM = rm -f
+
+FLAGS = -Wall -Wextra -Werror
+
+SRC =	game_logic/controls.c \
+		game_logic/errors.c \
+		game_logic/graphics.c \
+		game_logic/map_acces.c \
+		game_logic/map.c \
+		game_logic/so_long.c \
+		game_logic/utils_ex.c \
+		game_logic/utils.c
+
+
+OBJ = ${SRC:.c=.o}
+INLIBFT = -L./libft -lft
+INMLX = -Lminilibx -lmlx
+
+.c.o:
+	${CC} ${FLAGS} -Imlx -c $< -o $@
+
+${NAME}: ${OBJ}
+	@make -C $(LIBFTDIR)
+	@make -C $(MLXDIR)
+	${CC} ${OBJ} ${INLIBFT} ${INMLX} -framework OpenGL -framework AppKit -o ${NAME}
+
+all: ${NAME}
 
 clean:
+	${RM} ${OBJ}
+	@cd $(LIBFTDIR) && $(MAKE) clean
+	@cd $(MLXDIR) && $(MAKE) clean
 
 fclean: clean
-		make clean -C $(MINILIBX)
-		rm -rf $(NAME)
+	${RM} ${NAME}
+	@cd $(LIBFTDIR) && $(MAKE) fclean
 
 re: fclean all
+
+.PHONY: all clean fclean re
